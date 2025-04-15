@@ -11,7 +11,7 @@ screen = pygame.display.set_mode((width, width))
 pygame.display.set_caption("Turing Patterns")
 
 clock = pygame.time.Clock()
-simulation = Simulation(screen, 10, width)
+simulation = Simulation(screen, 40, width)
 
 
 running = True
@@ -20,8 +20,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    screen.fill((0, 0, 0))  # black
-
+    screen.fill((254, 248, 250))  # black
+    simulation.update()
     simulation.display()
 
     pygame.display.flip()
